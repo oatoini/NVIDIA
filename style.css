@@ -7,7 +7,7 @@
 #container {
     /* règle CSS */
     /* propriété : valeur */
-    max-width: 1024px;
+    width: 1024px;
     margin: auto;
     background-color: white;
 }
@@ -78,12 +78,14 @@ section figcaption span {
 main {
     display: flex;
     flex-direction: row;
+    margin-top: 1em;
 }
 
 article {
     display: flex;
     flex: 2;
     flex-direction: column;
+    border-bottom: solid rgb(88, 165, 16);
 }
 
 article img {
@@ -92,6 +94,14 @@ article img {
     margin-right: 1em;
     width: 2em;
     height: 1.5em;
+}
+
+#triangle {
+    transform: translate(320px, 431px);
+    height: 15px;
+    width: 15px;
+    position :absolute;
+    border: none;
 }
 
 aside {
@@ -112,11 +122,34 @@ aside p {
     text-align:justify;
 }
 
+p {
+    margin: 5px 0;
+}
+
+aside div {
+    display: flex;
+    justify-content: center;
+}
+
+aside div i {
+    margin: 0.5em;
+}
+
 footer {
     display: flex;
-    justify-content: space-between;
     margin: 20px 0;
 }
+
+footer .galerie div {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .galerie img {
+    width: 80px;
+    height: 80px;
+}
+
 
 .apropos {
     width: 100%;
@@ -139,3 +172,104 @@ footer {
     margin-bottom: 1em;
 }
 
+
+.newsletter {
+    flex: 1;
+    margin: 1em;
+}
+
+.galerie {
+    margin: 1em;
+}
+
+.galerie img {
+    margin: 0.2em;
+}
+
+footer h2 {
+    margin-bottom: 0.5em;
+}
+
+.partenaires {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 1em;
+}
+
+.partenaires div{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.partenaires a {
+    width: 80px;
+    height: 80px;
+    margin: 0.2em;
+}
+
+.partenaires a img {
+    width: 100%;
+}
+
+
+#contact input {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#submit {
+    background-color: rgb(88, 165, 16);
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+    }
+    
+    nav {
+        display: flex;
+        flex : 1;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-align: center;
+        margin: 1em;
+    }
+
+    section figcaption {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    #container {
+        width: 100%;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section figcaption {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
